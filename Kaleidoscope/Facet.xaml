@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Mangerie.Kaleidoscope.Facet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mangerie.Kaleidoscope"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="600">
+    <Canvas x:Name="container" Width="600" Height="600">
+        <Canvas.Clip>
+            <PathGeometry>
+                <PathGeometry.Figures>
+                    <PathFigureCollection>
+                        <PathFigure IsClosed="True" StartPoint="300, 300">
+                            <PathFigure.Segments>
+                                <PathSegmentCollection x:Name="clipPath">
+                                    <LineSegment Point="300,600" />
+                                    <LineSegment Point="150,600" />
+                                    <LineSegment Point="0,450" />
+                                </PathSegmentCollection>
+                            </PathFigure.Segments>
+                        </PathFigure>
+                    </PathFigureCollection>
+                </PathGeometry.Figures>
+            </PathGeometry>
+        </Canvas.Clip>
+        <Image Name="mainImage" Width="600" Height="600" Source="{Binding ImageSource}">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform CenterX="300" CenterY="300" Angle="{Binding ImageAngle}" />
+                    <ScaleTransform CenterX="300" CenterY="300" ScaleX="{Binding ImageScale}" ScaleY="{Binding ImageScale}" />
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Canvas>
+</UserControl>

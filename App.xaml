@@ -1,0 +1,67 @@
+﻿<Application x:Class="Mangerie.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Mangerie"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="KaleidoscopeSlider" TargetType="Slider">
+            <Setter Property="Margin" Value="0, 10" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Width" Value="250" />
+            <Setter Property="IsSnapToTickEnabled" Value="True" />
+            <Setter Property="Grid.Row" Value="1" />
+            <Setter Property="Grid.Column" Value="0" />
+            <Setter Property="Grid.ColumnSpan" Value="2" />
+        </Style>
+        <Style x:Key="SidePanel" TargetType="StackPanel">
+        </Style>
+        <Style x:Key="SidePanelText" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Width" Value="250" />
+            <Setter Property="TextAlignment" Value="Justify" />
+            <Setter Property="LineHeight" Value="21" />
+            <Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+        </Style>
+        <Style x:Key="ListItem" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="LineHeight" Value="21" />
+        </Style>
+        <Style x:Key="SidePanelBorder" TargetType="Border">
+            <Setter Property="Background" Value="AliceBlue" />
+            <Setter Property="BorderBrush" Value="LightSlateGray" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0, 30" />
+            <Setter Property="Padding" Value="20, 0, 20, 15" />
+        </Style>
+        <Style x:Key="SidePanelHeader" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="Typography.Capitals" Value="SmallCaps" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Foreground" Value="LightSlateGray" />
+        </Style>
+        <Style x:Key="SliderHeader" TargetType="Label">
+            <Setter Property="Margin" Value="10, 0" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="Typography.Capitals" Value="SmallCaps" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            
+        </Style>
+        <Style x:Key="SliderLabel" TargetType="TextBlock">
+            <Setter Property="Margin" Value="10, 0" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Grid.Column" Value="1" />
+        </Style>
+        
+        
+    </Application.Resources>
+    
+</Application>
